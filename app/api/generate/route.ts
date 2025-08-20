@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { generateBrand } from '@/lib/ai';
+import { generateBrand } from '../../../lib/ai';
 import JSZip from 'jszip';
 
 export async function POST(req: Request){

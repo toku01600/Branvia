@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { signDownloadUrl } from '@/lib/storage';
+import { uploadBuffer } from '../../../lib/storage';
 
 export async function POST(req: Request){
   const data = await req.json();
