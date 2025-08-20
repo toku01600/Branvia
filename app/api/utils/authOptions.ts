@@ -23,7 +23,7 @@ export const authOptions = {
     }),
     EmailProvider({
       sendVerificationRequest: async ({ identifier, url })=>{
-        const html = `<p>Sign in to BrandForge:</p><p><a href="${url}">${url}</a></p>`;
+        const html = `<p>Sign in to Branvia:</p><p><a href="${url}">${url}</a></p>`;
         await sendMail({ to: identifier, subject: 'Your sign-in link', html });
       },
       from: process.env.EMAIL_FROM
