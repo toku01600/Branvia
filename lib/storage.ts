@@ -1,12 +1,11 @@
 import { createClient } from '@supabase/supabase-js';
 
-// ✅ Supabase クライアントを初期化
+
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 );
 
-// ✅ 署名付きURLを生成
 export async function signDownloadUrl(key: string) {
   const { data, error } = await supabase.storage
     .from('artifacts') // ← bucket名（正しい名前にしてください）
@@ -16,7 +15,7 @@ export async function signDownloadUrl(key: string) {
   return data.signedUrl;
 }
 
-// ✅ バッファをアップロード
+
 export async function uploadBuffer(key: string, buffer: Buffer) {
   const { error } = await supabase.storage
     .from('artifacts') // ← bucket名
