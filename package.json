@@ -28,6 +28,7 @@
     "stripe": "16.6.0"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^3.0.0",
     "@types/react": "19.1.10",
     "prisma": "5.18.0",
     "typescript": "5.9.2"
